@@ -1,2 +1,2 @@
 src = ["api"]
-extend-select = ["I"]
+lint.extend-select = ["I"]
