@@ -1,23 +1,9 @@
-# API Service
+# API
 
-The API package exposes a FastAPI application and reads its
-configuration from environment variables (optionally via a `.env`
-file).
+Our architecture and implementation draw significant inspiration from the following open-source projects: 
 
-## Configuration
+1. [fastapi_best_architecture](https://github.com/fastapi-practices/fastapi_best_architecture)
+2. [fastapi-langgraph-agent-production-ready-template](https://github.com/wassim249/fastapi-langgraph-agent-production-ready-template)
+3. [open_deep_research](https://github.com/langchain-ai/open_deep_research)
 
-The following variables control the embedded Uvicorn server:
-
-- `API_HOST`: Bind address for the HTTP server. Default `0.0.0.0`.
-- `API_PORT`: Port number exposed by the server. Default `8000`.
-- `API_RELOAD`: Enable auto-reload during development. Default `false`.
-- `API_LOG_LEVEL`: Logging verbosity for Uvicorn. Default `info`.
-
-Example `.env` configuration:
-
-```
-API_HOST=0.0.0.0
-API_PORT=8000
-API_RELOAD=true
-API_LOG_LEVEL=debug
-```
+We sincerely thank the authors for their excellent work and contributions to the FastAPI community.
