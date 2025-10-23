@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 
+from app import register_routers
 from settings import settings
 
 app = FastAPI()
+
+register_routers(app)
 
 
 if __name__ == "__main__":
