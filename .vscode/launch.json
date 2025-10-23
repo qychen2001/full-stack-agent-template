@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Debug",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm run dev",
+      "cwd": "${workspaceFolder}/web"
+    },
+    {
+      "name": "FastAPI: Debug",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/api/main.py",
+      "cwd": "${workspaceFolder}/api",
+      "python": "${workspaceFolder}/api/.venv/bin/python"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack: Debug All",
+      "configurations": ["FastAPI: Debug", "Next.js: Debug"],
+      "presentation": {
+        "hidden": false,
+        "group": "fullstack",
+        "order": 1
+      },
+      "stopAll": true
+    }
+  ]
+}
